@@ -103,30 +103,7 @@ public class Main {
 			endTime = System.currentTimeMillis();
 			System.out.println("Total execution time to check length of serialized OurBigInt square root that we just read: " + new DecimalFormat("#,###.0000").format(((double)((endTime - startTime))/1000)/60) + " minutes." );
 		}
-/*
-		System.out.println("Computing Square Root of the OurBigInt...");
-		startTime = System.currentTimeMillis();
-		OurBigInt squareRoot = myLKP.sqrt();
-		endTime = System.currentTimeMillis();
-		System.out.println("Total execution time to compute square root: " + new DecimalFormat("#,###.0000").format(((double)((endTime - startTime))/1000)/60) + " minutes." );
-		System.out.println("Length of square root = " + new DecimalFormat("#,###").format(squareRoot.toString().length()));
-		myLKP.setMyNum_SquareRoot(squareRoot);
-		try {myLKP.serializeTargetOurBigIntSquareRootToDiskFile();} catch (Exception ex) {}
 
-		System.out.println("Squaring the Square Root...");
-		startTime = System.currentTimeMillis();
-		OurBigInt result = squareRoot.multiply(squareRoot);
-		endTime = System.currentTimeMillis();
-		System.out.println("Total execution time to square the square root: " + new DecimalFormat("#,###.0000").format(((double)((endTime - startTime))/1000)/60) + " minutes." );
-		System.out.println("Length of result = " + new DecimalFormat("#,###").format(result.toString().length()));
-
-		System.out.println("Comparing with original number...");
-		startTime = System.currentTimeMillis();
-		int comparison = myLKP.getNum().compareTo(result);
-		endTime = System.currentTimeMillis();
-		System.out.println("Total execution time to compare: " + new DecimalFormat("#,###.0000").format(((double)((endTime - startTime))/1000)/60) + " minutes." );
-		System.out.println("Result of comparison = " + comparison);
-*/
 		OurBigInt mod;
 		int startingPrime = 101;		// Where the divisor will start. Needs to be a prime number.
 		OurBigInt divisor = new OurBigInt(String.valueOf(startingPrime));
@@ -255,6 +232,12 @@ public class Main {
 			endTime = System.currentTimeMillis();
 			System.out.println("Total execution time to run the test loop: " + new DecimalFormat("#,###.0000").format(((double)((endTime - startTime))/1000)/60) + " minutes." );
 		}
+
+		 public void nothing()
+		{
+
+		}
+
 	private static void testSquareRootMethod() {
 		LKP foo = new LKP("");
 		OurBigInt x = new OurBigInt("100");

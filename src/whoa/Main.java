@@ -238,6 +238,13 @@ public class Main {
 
 		}
 
+
+	public void nothingtwo()
+	{
+
+	}
+
+
 	private static void testSquareRootMethod() {
 		LKP foo = new LKP("");
 		OurBigInt x = new OurBigInt("100");
